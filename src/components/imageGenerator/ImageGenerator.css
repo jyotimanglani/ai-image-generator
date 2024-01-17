@@ -78,10 +78,11 @@
 }
 
 .loading-bar-full{
-    width: 512px;
+
     height: 8px;
     background:#DE1B89;
-    transition: 15s;
+    transition: width 15s ease; /* Transition only the 'width' property over 15 seconds */
+  width: 100%; /* Initial width set to 100% */
 }
 
 .display-none{

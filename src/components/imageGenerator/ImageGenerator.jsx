@@ -14,6 +14,7 @@ const ImageGenerator = () => {
       return 0;
     }
     setLoading(true);
+    const startTime = new Date().getTime();
     const response = await fetch(
       "https://api.openai.com/v1/images/generations",
       {
@@ -30,14 +31,23 @@ const ImageGenerator = () => {
         }),
       }
     );
+
+    const endTime = new Date().getTime();
+    const actualLoadTime = endTime - startTime;
+
     let data = await response.json();
 
     let data_array = data.data;
-    console.log(data_array[0].url);
+
     setImageUrl(data_array[0] && data_array[0].url);
 
-    setLoading(false);
+    const remainingTime = Math.max(0, 15000 - actualLoadTime);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, remainingTime);
   };
+
   return (
     <div className="ai-image-generator">
       <div className="header">
