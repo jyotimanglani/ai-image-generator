@@ -38,7 +38,7 @@ Welcome to the AI Image Generator repository! This image generator app is built 
 
 ## Usage
 
--Open the app in your browser.
--Describe the image you want to generate in the provided input field.
--Click the "Generate" button.
--Witness the AI magic as the app generates a unique image based on your description.
+Open the app in your browser.
+Describe the image you want to generate in the provided input field.
+Click the "Generate" button.
+Witness the AI magic as the app generates a unique image based on your description.
